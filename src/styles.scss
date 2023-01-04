@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button, a {
+  text-decoration: none;
+  cursor: pointer;
+}
