@@ -6,6 +6,8 @@ import {QuillEditorComponent} from './quill-editor/quill-editor.component';
 import {CustomFileUploadService} from "./custom-file-upload/custom-file-upload.service";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {PipesModule} from "../../../pipes/pipes.module";
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import {MatTableModule} from "@angular/material/table";
   imports: [
     CommonModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PipesModule
   ],
   providers: [CustomFileUploadService]
 })

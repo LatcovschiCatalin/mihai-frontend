@@ -14,7 +14,7 @@ import {CustomFormService} from "./custom-form/custom-form.service";
   ],
   imports: [
     CommonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   providers: [LoaderService, CustomFormService]
 })
