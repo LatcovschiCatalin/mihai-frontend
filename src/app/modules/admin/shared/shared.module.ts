@@ -4,6 +4,8 @@ import {CustomFileUploadComponent} from './custom-file-upload/custom-file-upload
 import {CustomTableComponent} from './custom-table/custom-table.component';
 import {QuillEditorComponent} from './quill-editor/quill-editor.component';
 import {CustomFileUploadService} from "./custom-file-upload/custom-file-upload.service";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import {CustomFileUploadService} from "./custom-file-upload/custom-file-upload.s
     QuillEditorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [CustomFileUploadService]
 })

@@ -25,16 +25,6 @@
             <img [src]="'assets/icons/search.svg'"></div>
         </div>
       </div>
-      <mat-radio-group aria-label="Select an option" class="sort-options" *ngIf="show_sort && data?.length>0">
-        <mat-radio-button (click)="sortData('createdAt','ASC')" value="createdAtASC" class="option">Created Date(ASC)
-        </mat-radio-button>
-        <mat-radio-button (click)="sortData('createdAt','DES')" value="createdAtDES" class="option">Created Date(DES)
-        </mat-radio-button>
-        <mat-radio-button (click)="sortData('updatedAt', 'ASC')" value="updatedAtASC" class="option">Update Date(ASC)
-        </mat-radio-button>
-        <mat-radio-button (click)="sortData('updatedAt', 'DES')" value="updatedAtDES" class="option">Update Date(DES)
-        </mat-radio-button>
-      </mat-radio-group>
     </div>
     <table
       mat-table
