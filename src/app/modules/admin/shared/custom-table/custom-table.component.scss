@@ -1,0 +1,158 @@
+@import "../../admin.component.scss";
+
+$odd-color: #192038;
+$select-color: #151a30;
+
+.table {
+  width: 100%;
+  background-color: $secondarybg;
+  color: $primarybg;
+  border-radius: 10px;
+
+  .columns-name {
+    padding-top: 10px;
+  }
+
+  .th-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sort-img {
+    width: 18px;
+  }
+
+  th,
+  tr,
+  td {
+    color: $primarytext;
+  }
+
+  th {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: $secondarybg;
+    padding: 0;
+  }
+
+
+  td,
+  th {
+    padding: 1.25rem !important;
+    vertical-align: middle;
+  }
+
+  tr, th, td {
+    border: 1px solid $select-color;
+  }
+
+  tr {
+    height: 30px;
+
+    &:nth-child(odd) {
+      background-color: $odd-color;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+
+    img {
+      cursor: pointer;
+      width: 32px;
+
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.paginator {
+  background: $secondarybg;
+  color: $primarytext;
+}
+
+.mat-select-value {
+  color: $primarytext;
+}
+
+button {
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+  }
+}
+
+.search-section {
+  display: flex;
+}
+
+
+
+.sort {
+  margin-bottom: 30px;
+
+  .option-title {
+    font-size: 21px;
+  }
+
+  .arrange-array {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sort-buttons {
+      display: flex;
+      align-items: flex-start;
+    }
+    .search {
+      width: 200px;
+      outline: none;
+      padding: 5px 0;
+      margin-right: 10px;
+      color: $primarytext;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $primarytext;
+
+      &::placeholder {
+        color: $primarytext;
+      }
+    }
+  }
+
+
+  .sort-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .condition {
+    margin-top: 20px;
+    font-size: 21px;
+  }
+}
+
+.mat-radio-outer-circle {
+  border-color: $primarytext;
+}
+
+
+.mat-radio-outer-circle {
+  border-color: $primarytext !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: $primarytext !important;
+}
+
+th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+  width: 126px;
+}
