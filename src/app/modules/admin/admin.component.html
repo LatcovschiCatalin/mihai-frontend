@@ -1,1 +1,30 @@
-<p>admin works!</p>
+<mat-card class="admin-container">
+  <mat-toolbar class="nav">
+    <a routerLink="/">
+      <img class="logo" src="assets/images/logo.svg"/>
+    </a>
+
+    <div class="avatar">
+      <img src="assets/images/avatar.png">
+      <div class="user">{{name}}</div>
+    </div>
+  </mat-toolbar>
+  <mat-drawer-container class="container">
+    <mat-drawer mode="side" opened class="sidebar">
+
+
+      <a [routerLink]="item.link" *ngFor="let item of menu" class="link">
+        <img [src]="item.icon">
+        <a [routerLinkActive]="'active'" class="item-link">{{item.title}}</a>
+      </a>
+      <button class="logOut-button outlined shine" (click)="logout()">Log Out</button>
+    </mat-drawer>
+    <mat-drawer-content class="content">
+      <div class="data">
+        <router-outlet></router-outlet>
+      </div>
+      <footer class="admin-footer">Developed with love by <b>Latcovschi Catalin</b></footer>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+</mat-card>
