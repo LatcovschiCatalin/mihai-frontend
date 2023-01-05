@@ -1,0 +1,25 @@
+<ng-container>
+  <mat-tab-group>
+    <mat-tab [label]="'Editor'">
+      <div class="NgxEditor__Wrapper tab">
+        <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+        <ngx-editor
+          [editor]="editor"
+          [outputFormat]="'html'"
+          [formControl]="getFormControl()"
+          [placeholder]="quillConfig.placeholder"
+        ></ngx-editor>
+      </div>
+    </mat-tab>
+    <mat-tab [label]="'Import HTML'">
+      <div class="import-html tab">
+        <textarea
+          [formControl]="getFormControl()"
+          [placeholder]="quillConfig.placeholder"
+        ></textarea>
+      </div>
+
+    </mat-tab>
+  </mat-tab-group>
+
+</ng-container>
