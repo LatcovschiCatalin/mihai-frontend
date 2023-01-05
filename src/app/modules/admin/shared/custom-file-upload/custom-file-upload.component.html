@@ -1,0 +1,53 @@
+<div [ngClass]="uploadConfig.type === 'image' ? 'custom-image-upload' : 'custom-file'">
+
+  <div class="file-upload">
+
+    <div class="custom-file-upload">
+
+
+      <input #imageInput
+             type="file"
+             id="file"
+             class="inputFile"
+             [multiple]="uploadConfig.multiple?'multiple':''"
+             [accept]="uploadConfig.type === 'image' ? 'image/*' : uploadConfig.mimeType?uploadConfig.mimeType:''"
+             (change)="processFile(imageInput, $event)">
+
+      <label for="file">
+        <div class="img-button bottom" *ngIf="uploadConfig?.type === 'image'"
+             [ngStyle]="{marginBottom: fileUrl ? '20px' : '0'}">
+          <img src="assets/icons/upload2.svg">
+        </div>
+        <div class="img-button" *ngIf="uploadConfig?.multiple">
+          <img [src]="'assets/icons/upload.svg'">
+        </div>
+        <div class="custom-input upload-file" *ngIf="!uploadConfig?.multiple && uploadConfig?.type === 'file'">
+          <img class="upload-icon" src="assets/icons/upload.svg">
+          <div class="upload-description">{{name && uploadConfig.showName ? name : uploadConfig.title}}</div>
+        </div>
+      </label>
+      <div class="files" *ngIf="attachments.length>0">
+        <div class="file" *ngFor="let attachment of attachments">
+          {{attachment['fileName']}}
+          <div class="delete"
+               (click)="deleteSelectedFile(attachment['fileName'])">
+            <img [src]="'assets/icons/close.svg'">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <label>
+      <div class="clear" *ngIf="uploadConfig?.type === 'image' && fileUrl"
+           [ngStyle]="{marginBottom: fileUrl ? '20px' : '0'}"
+           (click)="deleteFile()">
+        <img src="assets/icons/clear.svg">
+      </div>
+    </label>
+  </div>
+  <div class="show-image" *ngIf="uploadConfig?.type === 'image' && fileUrl">
+    <img class="upload-image"
+         [src]="fileUrl">
+  </div>
+</div>
+
