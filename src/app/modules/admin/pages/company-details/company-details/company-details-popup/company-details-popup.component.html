@@ -1,0 +1,13 @@
+<div class="popup">
+  <div class="dialog-header">
+    <div class="dialog-title">Add blog</div>
+    <img src="assets/icons/close.svg" (click)="closeDialog()">
+  </div>
+
+  <div mat-dialog-content>
+    <app-custom-form class="dialog-content"
+                     (onClose)="closeDialog()"
+                     [formConfig]="{src:'company/image',gcloud_path:'company/public/',formData:request.labels,service:service,imageButton:true,labels:true, multiple:false}">
+    </app-custom-form>
+  </div>
+</div>

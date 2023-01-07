@@ -5,7 +5,7 @@ import {AdminComponent} from './admin.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuthService} from '../auth/auth.service';
 import {AuthInterceptor} from '../auth/auth-interceptor';
-import {SharedModule} from './shared/shared.module';
+import {AdminSharedModule} from './shared/shared.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
@@ -20,7 +20,7 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    SharedModule,
+    AdminSharedModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,

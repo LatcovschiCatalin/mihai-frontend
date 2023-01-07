@@ -7,11 +7,11 @@ const routes: Routes = [
     path: '',
     component: AdminComponent,
     children: [
-      // {
-      //   path: 'users',
-      //   loadChildren: () =>
-      //     import('./pages/users/users.module').then((m) => m.UsersModule),
-      // },
+      {
+        path: 'company-details',
+        loadChildren: () =>
+          import('./pages/company-details/company-details.module').then((m) => m.CompanyDetailsModule),
+      },
 
     ],
   },

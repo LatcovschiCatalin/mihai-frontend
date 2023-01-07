@@ -1,5 +1,10 @@
 export const MENU_ITEMS = [
   {
+    title: 'Company Details',
+    icon: 'assets/icons/message.svg',
+    link: '/admin/company-details'
+  },
+  {
     title: 'Messages',
     icon: 'assets/icons/message.svg',
     link: '/admin/messages'

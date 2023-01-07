@@ -40,5 +40,5 @@ import {PipesModule} from "../../../pipes/pipes.module";
   declarations: [CustomTableComponent, CustomFileUploadComponent, QuillEditorComponent],
   providers: [CustomFileUploadService],
 })
-export class SharedModule {
+export class AdminSharedModule {
 }
