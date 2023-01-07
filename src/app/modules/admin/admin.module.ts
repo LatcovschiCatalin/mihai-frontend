@@ -26,7 +26,7 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatSidenavModule,
+    MatSidenavModule
   ],
   declarations: [AdminComponent],
   providers: [
